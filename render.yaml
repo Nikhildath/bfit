@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bfit
+    env: node
+    buildCommand: npm run build
+    startCommand: npm run preview
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+    build:
+      publish: dist
